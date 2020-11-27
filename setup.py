@@ -32,7 +32,7 @@ setuptools.setup(
     maintainer_email='forml-dev@googlegroups.com',
     license='Apache License 2.0',
     packages=setuptools.find_packages(include=['openschema*']),
-    setup_requires=['setuptools', 'wheel'],
+    setup_requires=['setuptools', 'wheel', 'pytest-runner'],
     tests_require=['pytest-runner', 'pytest-pylint', 'pytest-flake8'],
     install_requires=['forml'],
     python_requires='>=3',
