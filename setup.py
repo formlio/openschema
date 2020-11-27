@@ -35,6 +35,9 @@ setuptools.setup(
     setup_requires=['setuptools', 'wheel', 'pytest-runner'],
     tests_require=['pytest-runner', 'pytest-pylint', 'pytest-flake8'],
     install_requires=['forml'],
+    extras_require={
+        'doc': {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'autoapi'},
+    },
     python_requires='>=3',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
