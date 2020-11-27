@@ -1,0 +1,8 @@
+build/
+dist/
+docs/**/_*
+docs/catalog/
+*.egg-info/
+*.log
+*.pyc
+.idea
