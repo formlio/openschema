@@ -44,8 +44,8 @@ class Prices(struct.Schema):
     INDUS = struct.Field(kind.Float())
     """float: Proportion of non-retail business acres per town."""
 
-    CHAS = struct.Field(kind.Float())
-    """float: Charles River dummy variable.
+    CHAS = struct.Field(kind.Integer())
+    """int: Charles River dummy variable.
 
     :Values:
         * 1 = tract bounds river
@@ -64,8 +64,8 @@ class Prices(struct.Schema):
     DIS = struct.Field(kind.Float())
     """float: Weighted distances to five Boston employment centres."""
 
-    RAD = struct.Field(kind.Float())
-    """float: Index of accessibility to radial highways."""
+    RAD = struct.Field(kind.Integer())
+    """int: Index of accessibility to radial highways."""
 
     TAX = struct.Field(kind.Float())
     """float: Full-value property-tax rate per $10,000."""
