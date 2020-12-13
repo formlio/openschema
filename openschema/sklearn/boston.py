@@ -15,8 +15,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
-""" `Sklearn flavour
-<https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html>`_ of the
+"""`Sklearn flavour
+<https://scikit-learn.org/stable/datasets/index.html#boston-dataset>`_ of the
 *Boston house prices* dataset schema.
 
 It differs from the `original UCIML <https://archive.ics.uci.edu/ml/machine-learning-databases/housing/>`_ version

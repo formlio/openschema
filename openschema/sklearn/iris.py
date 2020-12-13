@@ -15,8 +15,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
-""" `Sklearn flavour
-<https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris>`_ of the
+"""`Sklearn flavour
+<https://scikit-learn.org/stable/datasets/index.html#iris-plants-dataset>`_ of the
 *Iris Plants* dataset schema.
 
 It differs from the `original UCIML <https://archive.ics.uci.edu/ml/datasets/Iris>`_ version in the ``Class`` type plus
