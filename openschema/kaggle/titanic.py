@@ -18,17 +18,16 @@
 """
 `Kaggle's Titanic <https://www.kaggle.com/c/titanic>`_ dataset schema.
 """
-from forml.io.dsl import struct
-from forml.io.dsl.struct import kind
+from forml.io import dsl
 
 
-class Passenger(struct.Schema):
+class Passenger(dsl.Schema):
     """Titanic passenger list."""
 
-    PassengerId = struct.Field(kind.Integer())
+    PassengerId = dsl.Field(dsl.Integer())
     """int: Passenger ID."""
 
-    Survived = struct.Field(kind.Integer())
+    Survived = dsl.Field(dsl.Integer())
     """int: Survival.
 
     :Values:
@@ -36,7 +35,7 @@ class Passenger(struct.Schema):
         * 1 = Yes.
     """
 
-    Pclass = struct.Field(kind.Integer())
+    Pclass = dsl.Field(dsl.Integer())
     """int: Ticket class - proxy for socio-economic status (SES).
 
     :Values:
@@ -45,10 +44,10 @@ class Passenger(struct.Schema):
         * 3 = 3rd (Lower)
     """
 
-    Name = struct.Field(kind.String())
+    Name = dsl.Field(dsl.String())
     """str: Passenger name."""
 
-    Sex = struct.Field(kind.String())
+    Sex = dsl.Field(dsl.String())
     """str: Sex.
 
     :Values:
@@ -56,13 +55,13 @@ class Passenger(struct.Schema):
         * female
     """
 
-    Age = struct.Field(kind.Float())
+    Age = dsl.Field(dsl.Float())
     """float: Age in years.
 
     Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5.
     """
 
-    SibSp = struct.Field(kind.Integer())
+    SibSp = dsl.Field(dsl.Integer())
     """int: Number of siblings / spouses aboard the Titanic.
 
     The dataset defines family relations in this way:
@@ -71,7 +70,7 @@ class Passenger(struct.Schema):
         * Spouse: husband, wife (mistresses and fiancés were ignored)
     """
 
-    Parch = struct.Field(kind.Integer())
+    Parch = dsl.Field(dsl.Integer())
     """int: Number of parents / children aboard the Titanic.
 
     The dataset defines family relations in this way:
@@ -82,16 +81,16 @@ class Passenger(struct.Schema):
     Some children travelled only with a nanny, therefore parch=0 for them.
     """
 
-    Ticket = struct.Field(kind.Integer())
+    Ticket = dsl.Field(dsl.Integer())
     """int: Ticket number."""
 
-    Fare = struct.Field(kind.Float())
+    Fare = dsl.Field(dsl.Float())
     """float: Passenger fare."""
 
-    Cabin = struct.Field(kind.String())
+    Cabin = dsl.Field(dsl.String())
     """Cabin number."""
 
-    Embarked = struct.Field(kind.String())
+    Embarked = dsl.Field(dsl.String())
     """Port of Embarkation.
 
     :Values:

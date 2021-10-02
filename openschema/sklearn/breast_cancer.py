@@ -22,11 +22,10 @@
 It is the copy of the `original UCIML <https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)>`_
 version.
 """
-from forml.io.dsl import struct
-from forml.io.dsl.struct import kind
+from forml.io import dsl
 
 
-class Diagnostic(struct.Schema):
+class Diagnostic(dsl.Schema):
     """Breast cancer wisconsin (diagnostic) dataset.
 
     :Number of Instances: 569
@@ -82,7 +81,7 @@ class Diagnostic(struct.Schema):
     :Date: November, 1995
     """
 
-    diagnosis = struct.Field(kind.String())
+    diagnosis = dsl.Field(dsl.String())
     """str: Diagnosis class.
 
     :Values:
@@ -90,92 +89,92 @@ class Diagnostic(struct.Schema):
         * B = benign
     """
 
-    mean_radius = struct.Field(kind.Float())
+    mean_radius = dsl.Field(dsl.Float())
     """float: Mean of distances from center to points on the perimeter (mean)."""
 
-    mean_texture = struct.Field(kind.Float())
+    mean_texture = dsl.Field(dsl.Float())
     """float: Standard deviation of gray-scale values (mean)."""
 
-    mean_perimeter = struct.Field(kind.Float())
+    mean_perimeter = dsl.Field(dsl.Float())
     """float: Perimeter (mean)."""
 
-    mean_area = struct.Field(kind.Float())
+    mean_area = dsl.Field(dsl.Float())
     """float: Area (mean)."""
 
-    mean_smoothness = struct.Field(kind.Float())
+    mean_smoothness = dsl.Field(dsl.Float())
     """float: Local variation in radius lengths (mean)."""
 
-    mean_compactness = struct.Field(kind.Float())
+    mean_compactness = dsl.Field(dsl.Float())
     """float: perimeter^2 / area - 1.0 (mean)."""
 
-    mean_concavity = struct.Field(kind.Float())
+    mean_concavity = dsl.Field(dsl.Float())
     """float: Severity of concave portions of the contour (mean)."""
 
-    mean_concave_points = struct.Field(kind.Float())
+    mean_concave_points = dsl.Field(dsl.Float())
     """float: Number of concave portions of the contour (mean)."""
 
-    mean_symmetry = struct.Field(kind.Float())
+    mean_symmetry = dsl.Field(dsl.Float())
     """float: Symmetry (mean)."""
 
-    mean_fractal_dimension = struct.Field(kind.Float())
+    mean_fractal_dimension = dsl.Field(dsl.Float())
     """float: "coastline approximation" - 1 (mean)."""
 
-    radius_error = struct.Field(kind.Float())
+    radius_error = dsl.Field(dsl.Float())
     """float: Mean of distances from center to points on the perimeter (standard error)."""
 
-    texture_error = struct.Field(kind.Float())
+    texture_error = dsl.Field(dsl.Float())
     """float: Standard deviation of gray-scale values (standard error)."""
 
-    perimeter_error = struct.Field(kind.Float())
+    perimeter_error = dsl.Field(dsl.Float())
     """float: Perimeter (standard error)."""
 
-    area_error = struct.Field(kind.Float())
+    area_error = dsl.Field(dsl.Float())
     """float: Area (standard error)."""
 
-    smoothness_error = struct.Field(kind.Float())
+    smoothness_error = dsl.Field(dsl.Float())
     """float: Local variation in radius lengths (standard error)."""
 
-    compactness_error = struct.Field(kind.Float())
+    compactness_error = dsl.Field(dsl.Float())
     """float: perimeter^2 / area - 1.0 (standard error)."""
 
-    concavity_error = struct.Field(kind.Float())
+    concavity_error = dsl.Field(dsl.Float())
     """float: Severity of concave portions of the contour (standard error)."""
 
-    concave_points_error = struct.Field(kind.Float())
+    concave_points_error = dsl.Field(dsl.Float())
     """float: Number of concave portions of the contour (standard error)."""
 
-    symmetry_error = struct.Field(kind.Float())
+    symmetry_error = dsl.Field(dsl.Float())
     """float: Symmetry (standard error)."""
 
-    fractal_dimension_error = struct.Field(kind.Float())
+    fractal_dimension_error = dsl.Field(dsl.Float())
     """float: "coastline approximation" - 1 (standard error)."""
 
-    worst_radius = struct.Field(kind.Float())
+    worst_radius = dsl.Field(dsl.Float())
     """float: Mean of distances from center to points on the perimeter (worst)."""
 
-    worst_texture = struct.Field(kind.Float())
+    worst_texture = dsl.Field(dsl.Float())
     """float: Standard deviation of gray-scale values (worst)."""
 
-    worst_perimeter = struct.Field(kind.Float())
+    worst_perimeter = dsl.Field(dsl.Float())
     """float: Perimeter (worst)."""
 
-    worst_area = struct.Field(kind.Float())
+    worst_area = dsl.Field(dsl.Float())
     """float: Area (worst)."""
 
-    worst_smoothness = struct.Field(kind.Float())
+    worst_smoothness = dsl.Field(dsl.Float())
     """float: Local variation in radius lengths (worst)."""
 
-    worst_compactness = struct.Field(kind.Float())
+    worst_compactness = dsl.Field(dsl.Float())
     """float: perimeter^2 / area - 1.0 (worst)."""
 
-    worst_concavity = struct.Field(kind.Float())
+    worst_concavity = dsl.Field(dsl.Float())
     """float: Severity of concave portions of the contour (worst)."""
 
-    worst_concave_points = struct.Field(kind.Float())
+    worst_concave_points = dsl.Field(dsl.Float())
     """float: Number of concave portions of the contour (worst)."""
 
-    worst_symmetry = struct.Field(kind.Float())
+    worst_symmetry = dsl.Field(dsl.Float())
     """float: Symmetry (worst)."""
 
-    worst_fractal_dimension = struct.Field(kind.Float())
+    worst_fractal_dimension = dsl.Field(dsl.Float())
     """float: "coastline approximation" - 1 (worst)."""

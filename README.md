@@ -21,11 +21,13 @@ Openschema
 ==========
 
 [![GitHub Build](https://github.com/formlio/openschema/workflows/CI%20Build/badge.svg)](https://github.com/formlio/openschema/actions/)
+
 [![Documentation Status](https://readthedocs.org/projects/openschema/badge/?version=latest)](https://openschema.readthedocs.io/en/latest/)
 [![License](http://img.shields.io/:license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+![Python Version](https://img.shields.io/pypi/pyversions/openschema.svg)
 [![PyPI Version](https://badge.fury.io/py/openschema.svg)](https://pypi.org/project/openschema/)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/openschema)](https://pypi.org/project/openschema/)
-[![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
 Openschema is a programmatic catalog of public dataset schemas based on the [ForML Dataset DSL

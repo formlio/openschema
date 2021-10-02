@@ -22,11 +22,10 @@
 It differs from the `original UCIML <https://archive.ics.uci.edu/ml/datasets/Iris>`_ version in the ``Class`` type plus
 there are few data point fixes.
 """
-from forml.io.dsl import struct
-from forml.io.dsl.struct import kind
+from forml.io import dsl
 
 
-class Measurement(struct.Schema):
+class Measurement(dsl.Schema):
     """Iris Plants Database.
 
     :Number of Instances: 150 (50 in each of three classes)
@@ -49,19 +48,19 @@ class Measurement(struct.Schema):
     :Date: July, 1988
     """
 
-    SepalLength = struct.Field(kind.Float())
+    SepalLength = dsl.Field(dsl.Float())
     """float: Sepal length in cm."""
 
-    SepalWidth = struct.Field(kind.Float())
+    SepalWidth = dsl.Field(dsl.Float())
     """float: Sepal width in cm."""
 
-    PetalLength = struct.Field(kind.Float())
+    PetalLength = dsl.Field(dsl.Float())
     """float: Petal length in cm."""
 
-    PetalWidth = struct.Field(kind.Float())
+    PetalWidth = dsl.Field(dsl.Float())
     """float: Petal width in cm."""
 
-    Class = struct.Field(kind.Integer())
+    Class = dsl.Field(dsl.Integer())
     """int: Class.
 
     :Values:
