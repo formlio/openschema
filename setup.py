@@ -21,11 +21,10 @@ Setuptools script for Openschema package.
 
 import setuptools
 
-
 setuptools.setup(
     name='openschema',
     description='Programmatic catalog of public dataset schemas',
-    long_description=open('README.md', 'r').read(),
+    long_description=open('README.md', encoding='utf8').read(),  # pylint: disable=consider-using-with
     long_description_content_type='text/markdown',
     url='https://github.com/formlio/openschema',
     maintainer='ForML Development Team',
@@ -34,7 +33,7 @@ setuptools.setup(
     packages=setuptools.find_packages(include=['openschema*']),
     setup_requires=['setuptools', 'wheel', 'pytest-runner'],
     tests_require=['pytest-runner', 'pytest-pylint', 'pytest-flake8'],
-    install_requires=['forml'],
+    install_requires=['forml>=0.3.*'],
     extras_require={
         'doc': {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'sphinx-autoapi'},
     },
