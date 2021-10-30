@@ -18,4 +18,4 @@ Installation
 
 To install Openschema, simply use ``pip``::
 
-    pip install openschema
+    pip install --constraints https://raw.githubusercontent.com/formlio/openschema/main/constraints.txt openschema

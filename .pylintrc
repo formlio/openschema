@@ -56,7 +56,7 @@ disable=
   arguments-differ,
   attribute-defined-outside-init,
   cyclic-import,
-  invalid-name,
+  duplicate-code,
   too-many-branches,
   too-many-locals,
   too-many-arguments,

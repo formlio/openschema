@@ -25,7 +25,7 @@ version.
 from forml.io import dsl
 
 
-class Diagnostic(dsl.Schema):
+class BreastCancer(dsl.Schema):
     """Breast cancer wisconsin (diagnostic) dataset.
 
     :Number of Instances: 569
@@ -79,14 +79,6 @@ class Diagnostic(dsl.Schema):
     :Creator:  Dr. William H. Wolberg, W. Nick Street, Olvi L. Mangasarian
     :Donor: Nick Street
     :Date: November, 1995
-    """
-
-    diagnosis = dsl.Field(dsl.String())
-    """str: Diagnosis class.
-
-    :Values:
-        * M = malignant
-        * B = benign
     """
 
     mean_radius = dsl.Field(dsl.Float())
@@ -178,3 +170,11 @@ class Diagnostic(dsl.Schema):
 
     worst_fractal_dimension = dsl.Field(dsl.Float())
     """float: "coastline approximation" - 1 (worst)."""
+
+    diagnosis = dsl.Field(dsl.String())
+    """str: Diagnosis class.
+
+    :Values:
+        * M = malignant
+        * B = benign
+    """

@@ -25,7 +25,7 @@ there are few data point fixes.
 from forml.io import dsl
 
 
-class Measurement(dsl.Schema):
+class Iris(dsl.Schema):
     """Iris Plants Database.
 
     :Number of Instances: 150 (50 in each of three classes)

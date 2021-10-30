@@ -21,7 +21,7 @@
 from forml.io import dsl
 
 
-class Passenger(dsl.Schema):
+class Titanic(dsl.Schema):
     """Titanic passenger list."""
 
     PassengerId = dsl.Field(dsl.Integer())
@@ -81,14 +81,14 @@ class Passenger(dsl.Schema):
     Some children travelled only with a nanny, therefore parch=0 for them.
     """
 
-    Ticket = dsl.Field(dsl.Integer())
-    """int: Ticket number."""
+    Ticket = dsl.Field(dsl.String())
+    """str: Ticket number."""
 
     Fare = dsl.Field(dsl.Float())
     """float: Passenger fare."""
 
     Cabin = dsl.Field(dsl.String())
-    """Cabin number."""
+    """str: Cabin number."""
 
     Embarked = dsl.Field(dsl.String())
     """Port of Embarkation.

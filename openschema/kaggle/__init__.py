@@ -18,3 +18,7 @@
 """
 `Kaggle <https://www.kaggle.com/>`_ datasets schema catalog.
 """
+
+from ._titanic import Titanic
+
+__all__ = ['Titanic']

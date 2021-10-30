@@ -19,3 +19,8 @@
 `Scikit-learn flavours <https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets>`_ of the standard
 datasets.
 """
+
+from ._breast_cancer import BreastCancer
+from ._iris import Iris
+
+__all__ = ['BreastCancer', 'Iris']

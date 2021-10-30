@@ -31,8 +31,11 @@ Content
 -------
 
 .. toctree::
-    :titlesonly:
 
     license
     install
+
+.. toctree::
+    :maxdepth: 2
+
     catalog/index

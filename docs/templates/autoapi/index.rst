@@ -19,7 +19,7 @@ Catalog
 This page contains auto-generated index of the provided schemas:
 
 .. toctree::
-   :titlesonly:
-   :glob:
+    :maxdepth: 2
+    :glob:
 
-   openschema/*/index
+    openschema/*/index

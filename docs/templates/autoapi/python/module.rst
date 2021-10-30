@@ -29,38 +29,6 @@
 
 {% endif %}
 
-{% block subpackages %}
-{% set visible_subpackages = obj.subpackages|selectattr("display")|list %}
-{% if visible_subpackages %}
-Subpackages
------------
-.. toctree::
-   :titlesonly:
-   :maxdepth: 3
-
-{% for subpackage in visible_subpackages %}
-   {{ subpackage.short_name }}/index.rst
-{% endfor %}
-
-
-{% endif %}
-{% endblock %}
-{% block submodules %}
-{% set visible_submodules = obj.submodules|selectattr("display")|list %}
-{% if visible_submodules %}
-Datasets
---------
-.. toctree::
-   :titlesonly:
-   :maxdepth: 1
-
-{% for submodule in visible_submodules %}
-   {{ submodule.short_name }}/index.rst
-{% endfor %}
-
-
-{% endif %}
-{% endblock %}
 {% block content %}
 {% if obj.all is not none %}
 {% set visible_children = obj.children|selectattr("short_name", "in", obj.all)|list %}
@@ -76,8 +44,6 @@ Datasets
 {% if "show-module-summary" in autoapi_options and (visible_classes or visible_functions) %}
 {% block classes scoped %}
 {% if visible_classes %}
-Schemas
-~~~~~~~
 
 .. autoapisummary::
 
@@ -89,20 +55,6 @@ Schemas
 {% endif %}
 {% endblock %}
 
-{% block functions scoped %}
-{% if visible_functions %}
-Functions
-~~~~~~~~~
-
-.. autoapisummary::
-
-{% for function in visible_functions %}
-   {{ function.id }}
-{% endfor %}
-
-
-{% endif %}
-{% endblock %}
 {% endif %}
 {% for obj_item in visible_children %}
 {{ obj_item.rendered|indent(0) }}
