@@ -1,3 +1,4 @@
+.tox/
 build/
 dist/
 docs/**/_*
@@ -6,4 +7,7 @@ docs/catalog/
 .eggs/
 *.log
 *.pyc
+.coverage
 .idea
+coverage.xml
+junit.xml

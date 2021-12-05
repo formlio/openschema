@@ -47,7 +47,7 @@ flake8==4.0.1
     #   pytest-flake8
 flake8-colors==0.1.9
     # via openschema (setup.py)
-forml==0.3.dev1
+forml==0.3.dev2
     # via openschema (setup.py)
 identify==2.4.0
     # via pre-commit
@@ -140,8 +140,6 @@ pytest-flake8==1.0.7
 pytest-forked==1.3.0
     # via pytest-xdist
 pytest-pylint==0.18.0
-    # via openschema (setup.py)
-pytest-runner==5.3.1
     # via openschema (setup.py)
 pytest-xdist==2.4.0
     # via openschema (setup.py)

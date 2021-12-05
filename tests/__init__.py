@@ -15,6 +15,25 @@
 # specific language governing permissions and limitations
 # under the License.
 
-[metadata]
-author = attr: openschema.__author__
-version = attr: openschema.__version__
+"""
+Openschema tests.
+"""
+# pylint: disable=no-self-use
+import abc
+
+import pytest
+from forml.io import dsl
+
+
+class Schema(abc.ABC):
+    """Schema test base class."""
+
+    @staticmethod
+    @abc.abstractmethod
+    @pytest.fixture(scope='session')
+    def schema() -> dsl.Table:
+        """Schema fixture."""
+
+    def test_schema(self, schema: dsl.Table):
+        """Common schema test."""
+        assert isinstance(schema, dsl.Table)

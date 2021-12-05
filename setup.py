@@ -22,13 +22,13 @@ Setuptools script for Openschema package.
 import setuptools
 
 EXTRAS_DOC = {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'sphinx-autoapi'}
-EXTRAS_TEST = {'pytest-runner', 'pytest-pylint', 'pytest-flake8', 'pytest-cov', 'pytest-xdist', 'pytest-black'}
-EXTRAS_DEV = EXTRAS_TEST | {
+EXTRAS_DEV = {
     'flake8-colors',
     'isort',
     'pip-tools',
     'pre-commit',
     'pycln',
+    'pytest-cov',
 }
 
 EXTRAS_ALL = EXTRAS_DOC | EXTRAS_DEV
@@ -43,9 +43,8 @@ setuptools.setup(
     maintainer_email='forml-dev@googlegroups.com',
     license='Apache License 2.0',
     packages=setuptools.find_packages(include=['openschema*']),
-    setup_requires=['setuptools', 'wheel', 'pytest-runner'],
-    tests_require=list(EXTRAS_TEST),
-    install_requires=['forml>=0.3.*'],
+    setup_requires=['setuptools', 'wheel'],
+    install_requires=['forml'],
     extras_require={
         'all': EXTRAS_ALL,
         'doc': EXTRAS_DOC,

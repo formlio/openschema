@@ -15,6 +15,30 @@
 # specific language governing permissions and limitations
 # under the License.
 
-[metadata]
-author = attr: openschema.__author__
-version = attr: openschema.__version__
+"""
+Sklearn datasets tests.
+"""
+import pytest
+from forml.io import dsl
+
+from openschema import sklearn
+
+from . import Schema
+
+
+class TestBreastCancer(Schema):
+    """BreastCancer tests."""
+
+    @staticmethod
+    @pytest.fixture(scope='session')
+    def schema() -> dsl.Table:
+        return sklearn.BreastCancer
+
+
+class TestIris(Schema):
+    """Iris tests."""
+
+    @staticmethod
+    @pytest.fixture(scope='session')
+    def schema() -> dsl.Table:
+        return sklearn.Iris

@@ -15,6 +15,21 @@
 # specific language governing permissions and limitations
 # under the License.
 
-[metadata]
-author = attr: openschema.__author__
-version = attr: openschema.__version__
+"""
+Kaggle datasets tests.
+"""
+import pytest
+from forml.io import dsl
+
+from openschema import kaggle
+
+from . import Schema
+
+
+class TestTitanic(Schema):
+    """Titanic tests."""
+
+    @staticmethod
+    @pytest.fixture(scope='session')
+    def schema() -> dsl.Table:
+        return kaggle.Titanic
