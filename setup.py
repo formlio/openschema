@@ -21,7 +21,7 @@ Setuptools script for Openschema package.
 
 import setuptools
 
-EXTRAS_DOC = {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'sphinx-autoapi'}
+EXTRAS_DOCS = {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'sphinx-autoapi'}
 EXTRAS_DEV = {
     'flake8-colors',
     'isort',
@@ -31,7 +31,7 @@ EXTRAS_DEV = {
     'pytest-cov',
 }
 
-EXTRAS_ALL = EXTRAS_DOC | EXTRAS_DEV
+EXTRAS_ALL = EXTRAS_DOCS | EXTRAS_DEV
 
 setuptools.setup(
     name='openschema',
@@ -47,7 +47,7 @@ setuptools.setup(
     install_requires=['forml'],
     extras_require={
         'all': EXTRAS_ALL,
-        'doc': EXTRAS_DOC,
+        'docs': EXTRAS_DOCS,
     },
     python_requires='>=3',
     classifiers=[
