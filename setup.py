@@ -21,17 +21,21 @@ Setuptools script for Openschema package.
 
 import setuptools
 
-EXTRAS_DOCS = {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'sphinx-autoapi'}
 EXTRAS_DEV = {
+    'black',
     'flake8-colors',
+    'flake8-bugbear',
     'isort',
     'pip-tools',
     'pre-commit',
     'pycln',
+    'pylint',
     'pytest-cov',
 }
 
-EXTRAS_ALL = EXTRAS_DOCS | EXTRAS_DEV
+EXTRAS_DOCS = {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'sphinx-autoapi'}
+
+EXTRAS_ALL = EXTRAS_DEV | EXTRAS_DOCS
 
 setuptools.setup(
     name='openschema',
