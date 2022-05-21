@@ -18,6 +18,7 @@
 """
 Setuptools script for Openschema package.
 """
+import os
 
 import setuptools
 
@@ -25,6 +26,7 @@ EXTRAS_DEV = {
     'black',
     'flake8-colors',
     'flake8-bugbear',
+    'flake8-typing-imports',
     'isort',
     'pip-tools',
     'pre-commit',
@@ -33,7 +35,15 @@ EXTRAS_DEV = {
     'pytest-cov',
 }
 
-EXTRAS_DOCS = {'sphinx', 'sphinxcontrib-napoleon', 'sphinx_rtd_theme', 'sphinx-autoapi'}
+EXTRAS_DOCS = {
+    'sphinx',
+    'sphinx-autodoc-typehints',
+    'sphinx-copybutton',
+    'sphinx_rtd_theme',
+    'sphinxcontrib-details-directive',
+    'sphinxcontrib-napoleon',
+    'sphinx-autoapi',
+}
 
 EXTRAS_ALL = EXTRAS_DEV | EXTRAS_DOCS
 
@@ -46,7 +56,7 @@ setuptools.setup(
     maintainer='ForML Development Team',
     maintainer_email='forml-dev@googlegroups.com',
     license='Apache License 2.0',
-    packages=setuptools.find_packages(include=['openschema*']),
+    packages=setuptools.find_packages(include=['openschema*'], where=os.path.dirname(__file__)),
     setup_requires=['setuptools', 'wheel'],
     install_requires=['forml'],
     extras_require={
@@ -55,7 +65,7 @@ setuptools.setup(
     },
     python_requires='>=3',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
