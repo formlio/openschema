@@ -20,13 +20,13 @@
 Openschema
 ==========
 
-[![GitHub Build](https://github.com/formlio/openschema/workflows/CI%20Build/badge.svg)](https://github.com/formlio/openschema/actions/)
+[![GitHub Build](https://img.shields.io/github/workflow/status/formlio/openschema/CI%20Build/main)](https://github.com/formlio/openschema/actions/)
 
-[![Documentation Status](https://readthedocs.org/projects/openschema/badge/?version=latest)](https://openschema.readthedocs.io/en/latest/)
-[![License](http://img.shields.io/:license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
+[![Documentation Status](https://readthedocs.org/projects/openschema/badge/?version=latest)](https://docs.forml.io/en/latest/)
+[![License](https://img.shields.io/pypi/l/openschema)](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
-![Python Version](https://img.shields.io/pypi/pyversions/openschema.svg)
-[![PyPI Version](https://badge.fury.io/py/openschema.svg)](https://pypi.org/project/openschema/)
+![Python Version](https://img.shields.io/pypi/pyversions/openschema)
+[![PyPI Version](https://img.shields.io/pypi/v/openschema)](https://pypi.org/project/openschema/)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/openschema)](https://pypi.org/project/openschema/)
 
 
