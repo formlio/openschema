@@ -20,9 +20,11 @@ name: CI Build
 
 on:
   push:
-    branches: ['main']
+    branches:
+    - "main"
   pull_request:
-    branches: ['main']
+    branches:
+    - "main"
 
 
 jobs:
@@ -31,7 +33,8 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version:
+        - "3.9"
 
     steps:
     - name: "Checkout ${{ github.ref }} ( ${{ github.sha }} )"
@@ -43,5 +46,9 @@ jobs:
     - name: "Install dependencies"
       run: pip install --upgrade tox
     - name: "Run tests"
-      run: |
-        tox
+      run: tox
+    - name: "Upload test results"
+      uses: actions/upload-artifact@v2
+      with:
+        name: pytest-results-${{ matrix.python-version }}
+        path: junit.xml
