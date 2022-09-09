@@ -16,8 +16,7 @@
 # under the License.
 
 """
-`Scikit-learn flavours <https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets>`_ of the standard
-datasets.
+:mod:`Scikit-learn <sklearn:sklearn.datasets>` flavors of the standard datasets.
 """
 
 from ._breast_cancer import BreastCancer

@@ -13,13 +13,21 @@
     specific language governing permissions and limitations
     under the License.
 
-Catalog
-=======
+{{ name | title | escape | underline}}
 
-This page contains auto-generated index of the provided schemas:
+.. automodule:: {{ fullname }}
 
-.. toctree::
-    :maxdepth: 2
-    :glob:
+   {% block classes %}
+   {% if classes %}
+   .. rubric:: {{ _('Schemas') }}
 
-    openschema/*/index
+   .. autosummary::
+     :template: schema.rst
+     :nosignatures:
+     :toctree: _auto
+
+   {% for item in classes %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}

@@ -13,11 +13,9 @@
     specific language governing permissions and limitations
     under the License.
 
-Installation
-============
+{{ name | escape | underline}}
 
-To install Openschema, simply use :doc:`pip <pip:cli/pip_install>`:
+.. currentmodule:: {{ module }}
 
-.. code-block:: console
-
-    $ pip install --constraints https://raw.githubusercontent.com/formlio/openschema/main/constraints.txt openschema
+.. autoclass:: {{ objname }}
+   :members:

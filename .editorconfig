@@ -15,9 +15,25 @@
 # specific language governing permissions and limitations
 # under the License.
 
-"""
-Schema catalog.
-"""
+root = true
 
-__version__ = '0.4.dev0'
-__author__ = 'ForML Authors'
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+max_line_length = 120
+tab_width = 4
+trim_trailing_whitespace = true
+
+[*.py]
+ij_visual_guides = 100
+
+[*.{rst,md}]
+max_line_length = 100
+ij_wrap_on_typing = true
+ij_any_wrap_long_lines = true
+
+[Makefile]
+indent_style = tab

@@ -15,12 +15,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
-"""`Sklearn flavour
-<https://scikit-learn.org/stable/datasets/index.html#iris-plants-dataset>`_ of the
-*Iris Plants* dataset schema.
-
-It differs from the `original UCIML <https://archive.ics.uci.edu/ml/datasets/Iris>`_ version in the ``Class`` type plus
-there are few data point fixes.
+"""
+Sklearn Iris Plant dataset.
 """
 from forml.io import dsl
 
@@ -46,25 +42,32 @@ class Iris(dsl.Schema):
     :Creator: R.A. Fisher
     :Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)
     :Date: July, 1988
+
+    See Also:
+        Original :ref:`Sklearn documentation <sklearn:iris_dataset>`.
+
+    Note:
+        It differs from the `original UCIML <https://archive.ics.uci.edu/ml/datasets/Iris>`_ version
+        in the ``Class`` type plus there are few data point fixes.
     """
 
     SepalLength = dsl.Field(dsl.Float())
-    """float: Sepal length in cm."""
+    """Sepal length in cm."""
 
     SepalWidth = dsl.Field(dsl.Float())
-    """float: Sepal width in cm."""
+    """Sepal width in cm."""
 
     PetalLength = dsl.Field(dsl.Float())
-    """float: Petal length in cm."""
+    """Petal length in cm."""
 
     PetalWidth = dsl.Field(dsl.Float())
-    """float: Petal width in cm."""
+    """Petal width in cm."""
 
     Class = dsl.Field(dsl.Integer())
-    """int: Class.
+    """Class.
 
     :Values:
-        * 0 = setosa
-        * 1 = versicolor
-        * 2 = virginica
+        * ``0`` = setosa
+        * ``1`` = versicolor
+        * ``2`` = virginica
     """

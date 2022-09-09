@@ -33,19 +33,19 @@ EXTRAS_DEV = {
     'pycln',
     'pylint',
     'pytest-cov',
+    'pytest-xdist',
 }
 
 EXTRAS_DOCS = {
     'sphinx',
-    'sphinx-autodoc-typehints',
     'sphinx-copybutton',
     'sphinx_rtd_theme',
     'sphinxcontrib-details-directive',
     'sphinxcontrib-napoleon',
-    'sphinx-autoapi',
+    'sphinxcontrib-spelling',
 }
 
-EXTRAS_ALL = EXTRAS_DEV | EXTRAS_DOCS
+EXTRAS_ALL = ()
 
 setuptools.setup(
     name='openschema',
@@ -61,11 +61,12 @@ setuptools.setup(
     install_requires=['forml'],
     extras_require={
         'all': EXTRAS_ALL,
+        'dev': EXTRAS_DEV,
         'docs': EXTRAS_DOCS,
     },
     python_requires='>=3',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',

@@ -18,7 +18,6 @@
 """
 Openschema tests.
 """
-# pylint: disable=no-self-use
 import abc
 
 import pytest

@@ -15,18 +15,14 @@
 # specific language governing permissions and limitations
 # under the License.
 
-"""`Sklearn flavour
-<https://scikit-learn.org/stable/datasets/index.html#breast-cancer-wisconsin-diagnostic-dataset>`_ of the
-*Breast cancer* dataset schema.
-
-It is the copy of the `original UCIML <https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)>`_
-version.
+"""
+Breast Cancer dataset schema.
 """
 from forml.io import dsl
 
 
 class BreastCancer(dsl.Schema):
-    """Breast cancer wisconsin (diagnostic) dataset.
+    """Breast cancer Wisconsin (diagnostic) dataset.
 
     :Number of Instances: 569
     :Number of Attributes: 30 numeric, predictive attributes and the class
@@ -79,102 +75,107 @@ class BreastCancer(dsl.Schema):
     :Creator:  Dr. William H. Wolberg, W. Nick Street, Olvi L. Mangasarian
     :Donor: Nick Street
     :Date: November, 1995
+
+    See Also:
+        Original :ref:`Sklearn documentation <sklearn:breast_cancer_dataset>`
+        and the `original UCIML <https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)>`_
+        dataset.
     """
 
     mean_radius = dsl.Field(dsl.Float())
-    """float: Mean of distances from center to points on the perimeter (mean)."""
+    """Mean of distances from center to points on the perimeter (mean)."""
 
     mean_texture = dsl.Field(dsl.Float())
-    """float: Standard deviation of gray-scale values (mean)."""
+    """Standard deviation of gray-scale values (mean)."""
 
     mean_perimeter = dsl.Field(dsl.Float())
-    """float: Perimeter (mean)."""
+    """Perimeter (mean)."""
 
     mean_area = dsl.Field(dsl.Float())
-    """float: Area (mean)."""
+    """Area (mean)."""
 
     mean_smoothness = dsl.Field(dsl.Float())
-    """float: Local variation in radius lengths (mean)."""
+    """Local variation in radius lengths (mean)."""
 
     mean_compactness = dsl.Field(dsl.Float())
-    """float: perimeter^2 / area - 1.0 (mean)."""
+    """perimeter^2 / area - 1.0 (mean)."""
 
     mean_concavity = dsl.Field(dsl.Float())
-    """float: Severity of concave portions of the contour (mean)."""
+    """Severity of concave portions of the contour (mean)."""
 
     mean_concave_points = dsl.Field(dsl.Float())
-    """float: Number of concave portions of the contour (mean)."""
+    """Number of concave portions of the contour (mean)."""
 
     mean_symmetry = dsl.Field(dsl.Float())
-    """float: Symmetry (mean)."""
+    """Symmetry (mean)."""
 
     mean_fractal_dimension = dsl.Field(dsl.Float())
-    """float: "coastline approximation" - 1 (mean)."""
+    """*Coastline approximation* - 1 (mean)."""
 
     radius_error = dsl.Field(dsl.Float())
-    """float: Mean of distances from center to points on the perimeter (standard error)."""
+    """Mean of distances from center to points on the perimeter (standard error)."""
 
     texture_error = dsl.Field(dsl.Float())
-    """float: Standard deviation of gray-scale values (standard error)."""
+    """Standard deviation of gray-scale values (standard error)."""
 
     perimeter_error = dsl.Field(dsl.Float())
-    """float: Perimeter (standard error)."""
+    """Perimeter (standard error)."""
 
     area_error = dsl.Field(dsl.Float())
-    """float: Area (standard error)."""
+    """Area (standard error)."""
 
     smoothness_error = dsl.Field(dsl.Float())
-    """float: Local variation in radius lengths (standard error)."""
+    """Local variation in radius lengths (standard error)."""
 
     compactness_error = dsl.Field(dsl.Float())
-    """float: perimeter^2 / area - 1.0 (standard error)."""
+    """``perimeter^2 / area - 1.0`` (standard error)."""
 
     concavity_error = dsl.Field(dsl.Float())
-    """float: Severity of concave portions of the contour (standard error)."""
+    """Severity of concave portions of the contour (standard error)."""
 
     concave_points_error = dsl.Field(dsl.Float())
-    """float: Number of concave portions of the contour (standard error)."""
+    """Number of concave portions of the contour (standard error)."""
 
     symmetry_error = dsl.Field(dsl.Float())
-    """float: Symmetry (standard error)."""
+    """Symmetry (standard error)."""
 
     fractal_dimension_error = dsl.Field(dsl.Float())
-    """float: "coastline approximation" - 1 (standard error)."""
+    """*coastline approximation* - 1 (standard error)."""
 
     worst_radius = dsl.Field(dsl.Float())
-    """float: Mean of distances from center to points on the perimeter (worst)."""
+    """Mean of distances from center to points on the perimeter (worst)."""
 
     worst_texture = dsl.Field(dsl.Float())
-    """float: Standard deviation of gray-scale values (worst)."""
+    """Standard deviation of gray-scale values (worst)."""
 
     worst_perimeter = dsl.Field(dsl.Float())
-    """float: Perimeter (worst)."""
+    """Perimeter (worst)."""
 
     worst_area = dsl.Field(dsl.Float())
-    """float: Area (worst)."""
+    """Area (worst)."""
 
     worst_smoothness = dsl.Field(dsl.Float())
-    """float: Local variation in radius lengths (worst)."""
+    """Local variation in radius lengths (worst)."""
 
     worst_compactness = dsl.Field(dsl.Float())
-    """float: perimeter^2 / area - 1.0 (worst)."""
+    """``perimeter^2 / area - 1.0`` (worst)."""
 
     worst_concavity = dsl.Field(dsl.Float())
-    """float: Severity of concave portions of the contour (worst)."""
+    """Severity of concave portions of the contour (worst)."""
 
     worst_concave_points = dsl.Field(dsl.Float())
-    """float: Number of concave portions of the contour (worst)."""
+    """Number of concave portions of the contour (worst)."""
 
     worst_symmetry = dsl.Field(dsl.Float())
-    """float: Symmetry (worst)."""
+    """Symmetry (worst)."""
 
     worst_fractal_dimension = dsl.Field(dsl.Float())
-    """float: "coastline approximation" - 1 (worst)."""
+    """*coastline approximation* - 1 (worst)."""
 
     diagnosis = dsl.Field(dsl.String())
-    """str: Diagnosis class.
+    """Diagnosis class.
 
     :Values:
-        * M = malignant
-        * B = benign
+        * ``M`` = malignant
+        * ``B`` = benign
     """

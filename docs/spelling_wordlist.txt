@@ -1,0 +1,15 @@
+Cherbourg
+dataset
+datasets
+Kaggle
+Mangasarian
+Olvi
+openschema
+Queenstown
+schemas
+setosa
+sklearn
+versicolor
+virginica
+Wisconsin
+Wolberg

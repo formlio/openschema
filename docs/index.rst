@@ -16,7 +16,7 @@
 Openschema Documentation
 ========================
 
-Openschema is a programmatic catalog of public dataset schemas based on the :doc:`ForML Dataset DSL API<forml:dsl>`.
+Openschema is a programmatic catalog of public dataset schemas based on the :ref:`ForML Dataset DSL API <forml:dsl>`.
 
 Resources
 ---------
@@ -31,11 +31,8 @@ Content
 -------
 
 .. toctree::
+    :maxdepth: 2
 
     license
     install
-
-.. toctree::
-    :maxdepth: 2
-
-    catalog/index
+    catalog

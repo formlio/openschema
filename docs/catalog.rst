@@ -13,11 +13,12 @@
     specific language governing permissions and limitations
     under the License.
 
-Installation
-============
+Catalog
+=======
 
-To install Openschema, simply use :doc:`pip <pip:cli/pip_install>`:
+.. autosummary::
+   :template: catalog.rst
+   :toctree: _auto
 
-.. code-block:: console
-
-    $ pip install --constraints https://raw.githubusercontent.com/formlio/openschema/main/constraints.txt openschema
+    openschema.kaggle
+    openschema.sklearn

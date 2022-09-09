@@ -16,85 +16,89 @@
 # under the License.
 
 """
-`Kaggle's Titanic <https://www.kaggle.com/c/titanic>`_ dataset schema.
+Kaggle's Titanic dataset schema.
 """
 from forml.io import dsl
 
 
 class Titanic(dsl.Schema):
-    """Titanic passenger list."""
+    """Titanic passenger list.
+
+    See Also:
+        The original `Titanic competition <https://www.kaggle.com/c/titanic>`_.
+    """
 
     PassengerId = dsl.Field(dsl.Integer())
-    """int: Passenger ID."""
+    """Passenger ID."""
 
     Survived = dsl.Field(dsl.Integer())
-    """int: Survival.
+    """Survival.
 
     :Values:
-        * 0 = No.
-        * 1 = Yes.
+        * ``0`` = No
+        * ``1`` = Yes
     """
 
     Pclass = dsl.Field(dsl.Integer())
-    """int: Ticket class - proxy for socio-economic status (SES).
+    """Ticket class - proxy for socioeconomic status (SES).
 
     :Values:
-        * 1 = 1st (Upper)
-        * 2 = 2nd (Middle)
-        * 3 = 3rd (Lower)
+        * ``1`` = first (Upper)
+        * ``2`` = second (Middle)
+        * ``3`` = third (Lower)
     """
 
     Name = dsl.Field(dsl.String())
-    """str: Passenger name."""
+    """Passenger name."""
 
     Sex = dsl.Field(dsl.String())
-    """str: Sex.
+    """Sex.
 
     :Values:
-        * male
-        * female
+        * ``male``
+        * ``female``
     """
 
     Age = dsl.Field(dsl.Float())
-    """float: Age in years.
+    """Age in years.
 
-    Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5.
+    Age is fractional if less than ``1``. If the age is estimated, it is in the form of ``xx.5``.
     """
 
     SibSp = dsl.Field(dsl.Integer())
-    """int: Number of siblings / spouses aboard the Titanic.
+    """Number of siblings / spouses aboard the Titanic.
 
     The dataset defines family relations in this way:
 
         * Sibling: brother, sister, stepbrother, stepsister
-        * Spouse: husband, wife (mistresses and fiancés were ignored)
+        * Spouse: husband, wife (mistresses and fiances were ignored)
     """
 
     Parch = dsl.Field(dsl.Integer())
-    """int: Number of parents / children aboard the Titanic.
+    """Number of parents / children aboard the Titanic.
 
     The dataset defines family relations in this way:
 
         * Parent: mother, father
         * Child: daughter, son, stepdaughter, stepson
 
-    Some children travelled only with a nanny, therefore parch=0 for them.
+    Some children traveled only with a nanny, therefore ``parch=0`` for them.
     """
 
     Ticket = dsl.Field(dsl.String())
-    """str: Ticket number."""
+    """Ticket number."""
 
     Fare = dsl.Field(dsl.Float())
-    """float: Passenger fare."""
+    """Passenger fare."""
 
     Cabin = dsl.Field(dsl.String())
-    """str: Cabin number."""
+    """Cabin number."""
 
     Embarked = dsl.Field(dsl.String())
     """Port of Embarkation.
 
     :Values:
-        * C = Cherbourg
-        * Q = Queenstown
-        * S = Southampton
+        * ``C`` = Cherbourg
+        * ``Q`` = Queenstown
+        * ``S`` = Southampton
     """

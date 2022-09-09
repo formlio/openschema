@@ -14,12 +14,14 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
+"""
+Configuration file for the Sphinx documentation builder.
 
-# Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# http://www.sphinx-doc.org/en/master/config
+This file only contains a selection of the most common options. For a full
+list see the documentation:
+http://www.sphinx-doc.org/en/master/config
+"""
+# pylint: disable=invalid-name
 
 # -- Path setup --------------------------------------------------------------
 
@@ -27,20 +29,23 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import glob
+
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('..'))
+from sphinx import application
 
-import openschema  # noqa: E402
+sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('.'))
+
+import _custom  # pylint: disable=wrong-import-position; # noqa: E402
 
 # -- Project information -----------------------------------------------------
 
 project = 'Openschema'
 
 # The full version, including alpha/beta/rc tags
-release = openschema.__version__
+release = _custom.VERSION
 
 
 # -- General configuration ---------------------------------------------------
@@ -49,7 +54,6 @@ release = openschema.__version__
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'autoapi.extension',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.coverage',
@@ -59,7 +63,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinxcontrib.details.directive',
-    'sphinx_autodoc_typehints',
+    'sphinxcontrib.spelling',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -71,11 +75,14 @@ templates_path = ['_templates']
 exclude_patterns = ['_build']
 
 intersphinx_mapping = {
-    'forml': ('https://docs.forml.io/en/latest/', None),
+    'forml': ('https://docs.forml.io/en/develop/', None),
+    'pip': ('https://pip.pypa.io/en/stable/', None),
+    'python': ('https://docs.python.org/3', None),
+    'sklearn': ('https://scikit-learn.org/stable/', None),
 }
 
 # Warn about all references where the target cannot be found
-nitpicky = False
+nitpicky = True
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -90,7 +97,7 @@ html_title = 'OpenSchema'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 html_show_sourcelink = True
 html_show_copyright = False
@@ -100,30 +107,19 @@ html_show_sphinx = False
 
 # -- Options for sphinx.ext.autodoc --------------------------------------------
 # See: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
-autoclass_content = 'both'
-autodoc_typehints = 'description'
+autodoc_typehints = 'signature'
+autodoc_member_order = 'bysource'
 autosummary_generate = True
+autosummary_ignore_module_all = False
+autosummary_imported_members = True
 
 # -- Options for sphinx.ext.napoleon --------------------------------------------
 # See: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
 napoleon_numpy_docstring = False
-napoleon_use_rtype = False
-napoleon_include_init_with_doc = True
 
-# -- Options for sphinx_autodoc_typehints --------------------------------------
-# See: https://pypi.org/project/sphinx-autodoc-typehints/
 
-# -- Options for sphinx-autoapi ------------------------------------------------
-# See: https://sphinx-autoapi.readthedocs.io/en/latest/config.html
-
-autoapi_dirs = glob.glob('../openschema/*/')
-autoapi_root = 'catalog'
-autoapi_template_dir = 'templates/autoapi'
-autoapi_options = [
-    'members',
-    'inherited-members',
-    'undoc-members',
-    'show-module-summary',
-    'special-members',
-    'imported-members',
-]
+def setup(app: application.Sphinx):
+    """Sphinx setup hook."""
+    app.add_autodocumenter(_custom.ClassDocumenter, override=True)
+    app.add_autodocumenter(_custom.AttributeDocumenter, override=True)
+    app.add_directive('autosummary', _custom.Autosummary, override=True)
