@@ -38,14 +38,14 @@ from sphinx import application
 sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('.'))
 
-import _custom  # pylint: disable=wrong-import-position; # noqa: E402
+import _doc  # pylint: disable=wrong-import-position; # noqa: E402
 
 # -- Project information -----------------------------------------------------
 
 project = 'Openschema'
 
 # The full version, including alpha/beta/rc tags
-release = _custom.VERSION
+release = _doc.VERSION
 
 
 # -- General configuration ---------------------------------------------------
@@ -120,6 +120,6 @@ napoleon_numpy_docstring = False
 
 def setup(app: application.Sphinx):
     """Sphinx setup hook."""
-    app.add_autodocumenter(_custom.ClassDocumenter, override=True)
-    app.add_autodocumenter(_custom.AttributeDocumenter, override=True)
-    app.add_directive('autosummary', _custom.Autosummary, override=True)
+    app.add_autodocumenter(_doc.ClassDocumenter, override=True)
+    app.add_autodocumenter(_doc.AttributeDocumenter, override=True)
+    app.add_directive('autosummary', _doc.Autosummary, override=True)

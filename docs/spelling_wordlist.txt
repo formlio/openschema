@@ -4,11 +4,11 @@ datasets
 Kaggle
 Mangasarian
 Olvi
-openschema
+Openschema
 Queenstown
 schemas
+Scikit
 setosa
-sklearn
 versicolor
 virginica
 Wisconsin

@@ -17,6 +17,8 @@
 
 """
 :mod:`Scikit-learn <sklearn:sklearn.datasets>` flavors of the standard datasets.
+
+.. spelling:word-list:: Sklearn
 """
 
 from ._breast_cancer import BreastCancer
