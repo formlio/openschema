@@ -31,7 +31,7 @@ Openschema
 
 
 Openschema is a programmatic catalog of public dataset schemas based on the [ForML Dataset DSL
-API](https://docs.forml.io/en/latest/dsl.html).
+API](https://docs.forml.io/en/latest/dsl/index.html).
 
 
 Resources
