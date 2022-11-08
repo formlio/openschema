@@ -22,7 +22,7 @@ Openschema
 
 [![GitHub Build](https://img.shields.io/github/workflow/status/formlio/openschema/CI%20Build/main)](https://github.com/formlio/openschema/actions/)
 
-[![Documentation Status](https://readthedocs.org/projects/openschema/badge/?version=latest)](https://docs.forml.io/en/latest/)
+[![Documentation Status](https://readthedocs.org/projects/openschema/badge/?version=latest)](https://openschema.readthedocs.io/en/latest/)
 [![License](https://img.shields.io/pypi/l/openschema)](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 ![Python Version](https://img.shields.io/pypi/pyversions/openschema)

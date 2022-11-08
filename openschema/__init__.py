@@ -19,5 +19,4 @@
 Schema catalog.
 """
 
-__version__ = '0.4.dev2'
-__author__ = 'ForML Authors'
+__version__ = '0.5.dev1'
