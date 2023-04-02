@@ -20,4 +20,4 @@ To install Openschema, simply use :doc:`pip <pip:cli/pip_install>`:
 
 .. code-block:: console
 
-    $ pip install --constraints https://raw.githubusercontent.com/formlio/openschema/main/constraints.txt openschema
+    $ pip install --constraint https://raw.githubusercontent.com/formlio/openschema/main/constraints.txt openschema

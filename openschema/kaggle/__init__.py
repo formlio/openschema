@@ -19,6 +19,7 @@
 `Kaggle <https://www.kaggle.com/>`_ datasets schema catalog.
 """
 
+from ._avazu import Avazu
 from ._titanic import Titanic
 
-__all__ = ['Titanic']
+__all__ = ['Avazu', 'Titanic']
