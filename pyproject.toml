@@ -113,7 +113,7 @@ clean = [
         \\) \
     \\) -print -exec rm -rf {{}} \\;""",
 ]
-update = "pip-compile --extra=dev,docs --output-file={env:PIP_CONSTRAINT} --no-emit-index-url --strip-extras --rebuild --upgrade pyproject.toml"
+update = "pip-compile --extra=dev,docs --output-file={env:PIP_CONSTRAINT} --no-emit-index-url --strip-extras --rebuild --upgrade --resolver=backtracking pyproject.toml"
 
 [tool.hatch.envs.dev]
 dependencies = [

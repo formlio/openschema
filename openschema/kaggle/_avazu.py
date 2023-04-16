@@ -39,7 +39,7 @@ class Avazu(dsl.Schema):
         * ``1`` = Click
     """
 
-    hour = dsl.Field(dsl.Integer())
+    hour = dsl.Field(dsl.Timestamp())
     """Ad request hour.
 
     Format is ``YYMMDDHH``, so ``14091123`` means *23:00* on *Sept. 11, 2014 UTC*.
